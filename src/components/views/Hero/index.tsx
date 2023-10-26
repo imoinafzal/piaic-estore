@@ -1,4 +1,4 @@
-import Wrapper from "@/components/shared/Wrapper";
+
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingCart } from "lucide-react";

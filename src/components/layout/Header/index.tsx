@@ -1,65 +1,3 @@
-// "use client"
-
-// import React from "react";
-// import Image from "next/image";
-// import Logo from "../../assets/logo.webp";
-// import { ShoppingCart } from "lucide-react";
-// import { Input } from "@/components/ui/input";
-// import Wrapper from "@/components/shared/Wrapper";
-// import { GiHamburgerMenu } from "react-icons/gi";
-// import { useSelector } from "react-redux";
-// import { RootState } from "@/store/store";
-// import Link from "next/link";
-
-// const Header = () => {
-//   const cartValue = useSelector(
-//     (state: RootState) => state.cart.totalQuantity
-//   )
-//   return (
-//     <section>
-//       <Wrapper>
-//         <div className="flex justify-between items-center py-4">
-//           <div>
-//             <Image src={Logo} alt="Logo" />
-//           </div>
-//           <div>
-//             <ul className="hidden lg:flex gap-x-8">
-//               <li>Male</li>
-//               <li>Female</li>
-//               <li>Kids</li>
-//               <li>
-//               <Link href={"/products"}>All Products</Link>
-//               </li>
-//             </ul>
-//           </div>
-//           <div className="hidden lg:flex">
-//             <Input
-//               className="w-60"
-//               type="search"
-//               placeholder="What are you looking for"
-//             />
-//           </div>
-//           <div className="hidden lg:flex relative justify-center w-10 h-10 items-center rounded-full bg-gray-300">
-//             <span className="absolute right-1 top-0 rounded-full bg-red-500 h-5 w-5 text-white text-xs text-center">
-//               {cartValue}
-//             </span>
-//             <ShoppingCart className="h-6 w-6" />
-//           </div>
-//           <div className="lg:hidden">
-//             <GiHamburgerMenu size={25} />
-//           </div>
-//         </div>
-//       </Wrapper>
-//     </section>
-//   );
-// };
-
-// export default Header;
-
-
-// Basit Navbar
-
-
 import React from "react";
 import Image from "next/image";
 import Logo from "../../../components/assets/logo.webp";
@@ -73,6 +11,7 @@ import {
 import { ShoppingCart } from "lucide-react";
 import DropdownMenuDemo from "../../ui/AvatarDisplay"
 import { SearchFeature } from "@/components/ui/SearchFeature";
+
 interface navArray {
   label: string;
   href: string;
@@ -125,6 +64,7 @@ const Navbar = () => {
           
           <SearchFeature />
           <ShoppingCart size={20} />
+          
           {!user ? (
             <div className="space-x-3">
               <LoginLink

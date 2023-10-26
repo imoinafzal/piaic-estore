@@ -20,7 +20,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+          <div className="lg:w-1/3 md:w-1/2 w-full px-4">
             <h2 className="title-font font-bold text-gray-600 tracking-widest text-lg mb-3">
               COMPANY
             </h2>
@@ -48,7 +48,7 @@ const Footer = () => {
               </li>
             </nav>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+          <div className="lg:w-1/3 md:w-1/2 w-full px-4">
             <h2 className="title-font font-bold text-gray-600 tracking-widest text-lg mb-3">
               SUPPORT
             </h2>
@@ -68,7 +68,7 @@ const Footer = () => {
               </li>
             </nav>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+          <div className="lg:w-1/3 md:w-1/2 w-full px-4">
             <h2 className="title-font font-bold text-gray-600 tracking-widest text-lg mb-3">
               CONTACT
             </h2>
@@ -101,7 +101,7 @@ const Footer = () => {
               <svg
                 fill="currentColor"
                 strokeLinecap="round"
-                stroke-linejoin="round"
+                strokeLinejoin="round"
                 strokeWidth="2"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
@@ -113,7 +113,7 @@ const Footer = () => {
               <svg
                 fill="currentColor"
                 strokeLinecap="round"
-                stroke-linejoin="round"
+                strokeLinejoin="round"
                 strokeWidth="2"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
@@ -126,7 +126,7 @@ const Footer = () => {
                 fill="none"
                 stroke="currentColor"
                 strokeLinecap="round"
-                stroke-linejoin="round"
+                strokeLinejoin="round"
                 strokeWidth="2"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
@@ -140,7 +140,7 @@ const Footer = () => {
                 fill="currentColor"
                 stroke="currentColor"
                 strokeLinecap="round"
-                stroke-linejoin="round"
+                strokeLinejoin="round"
                 strokeWidth="0"
                 className="w-5 h-5"
                 viewBox="0 0 24 24"
