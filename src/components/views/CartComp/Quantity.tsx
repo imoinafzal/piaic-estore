@@ -29,7 +29,7 @@ const Quantity = ({
           -
         </button>
         <p className="ring-sky-200 ring-2 rounded-md cursor-pointer flex justify-center items-center w-8 h-8">
-          Quantity
+          {data.quantity ? data.quantity : 0}
         </p>
         <button
           onClick={() =>
