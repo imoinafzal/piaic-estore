@@ -65,7 +65,7 @@ const Navbar = () => {
           
           <SearchFeature />
           {/* <CartValue /> */}
-          <ShoppingCart size={20} />
+          <Link href={'/cart'}><ShoppingCart size={20} /></Link>
           
           {!user ? (
             <div className="space-x-3">

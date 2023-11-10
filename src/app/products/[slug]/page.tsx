@@ -8,6 +8,7 @@ import {
   singleProductType,
 } from "@/components/utils/types";
 import { Suspense } from "react";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 export async function generateStaticParams() {
   const data =
@@ -46,7 +47,10 @@ async function Detail({ slug }: { slug: string }) {
     slug
   )) as allProductFetcherFromSanityType;
 
-  return <ProductDetails product={data.result[0]} />;
+  const {getUser} = getKindeServerSession() ;
+    const user = getUser() ;
+
+  return <ProductDetails product={data.result[0]} user={user} />;
 }
 
 export default Brief;

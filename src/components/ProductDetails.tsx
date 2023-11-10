@@ -3,23 +3,46 @@
 import React, { useState } from "react";
 import { singleProductType } from "./utils/types";
 import { urlForImage } from "../../sanity/lib/image";
-import Quantity from "./Quantity";
+import Quantity from "./views/CartComp/Quantity";
 import AddToCart from "./AddToCart";
 import Image from "next/image";
 import PortableText from "react-portable-text";
+import { KindeUser } from "@kinde-oss/kinde-auth-nextjs/server";
+import { addToCartApiCall } from "./utils/apiCalling";
+import { useToast } from "./ui/use-toast";
+import { ToastAction } from "./ui/toast";
 
-const ProductDetails = ({ product }: { product: singleProductType }) => {
+const ProductDetails = ({ product, user }: { product: singleProductType , user : KindeUser}) => {
   const [imagesArray, setImagesArray] = useState<string[]>(() => {
     return product.image.map((element) => {
       return urlForImage(element).url() as string;
     });
   });
 
+  const {toast} = useToast() ;
+
   const [size, setSize] = useState<string>(product.size[0]);
 
   const [activeImageUrl, setActiveImageUrl] = useState<string>(
     urlForImage(product.image[0]).url() as string
   );
+
+  async function handleAddToCart(){
+    if(user){
+      await addToCartApiCall(user.id as string, product._id) ;
+      toast({
+        title: "Successful",
+        description: "Added to cart",
+      })
+    } else {
+      toast({
+        title: "Not Successful",
+        description: "Cannot add to cart",
+        variant: "destructive",
+        action: <ToastAction altText="Try again">Try again</ToastAction>
+      })
+    }
+  }
 
   return (
     <div className="fle justify-evenly mt-16 py-10 flex-wrap">
@@ -79,7 +102,7 @@ const ProductDetails = ({ product }: { product: singleProductType }) => {
               <Quantity />
             </div>
             <div className="flex items-center gap-x-3 mt-6">
-              <AddToCart />
+            <button aria-label="This will add product to cart" onClick={handleAddToCart} className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add to Cart</button>
               <div className="text-xl font-bold">
                 ${product.price.toFixed(2)}
               </div>
