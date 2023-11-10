@@ -38,3 +38,4 @@ export interface allProductFetcherFromSanityType {
     query: string,
     result: Array<singleProductType>
 }
+

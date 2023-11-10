@@ -11,6 +11,7 @@ import {
 import { ShoppingCart } from "lucide-react";
 import DropdownMenuDemo from "../../ui/AvatarDisplay"
 import { SearchFeature } from "@/components/ui/SearchFeature";
+// import CartValue from "@/components/CartValue";
 
 interface navArray {
   label: string;
@@ -63,6 +64,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-4">
           
           <SearchFeature />
+          {/* <CartValue /> */}
           <ShoppingCart size={20} />
           
           {!user ? (
