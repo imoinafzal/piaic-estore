@@ -11,7 +11,7 @@ import Link from "next/link";
 import React, { FC, useEffect, useState } from "react";
 import Image from "next/image";
 import { urlForImage } from "../../../../sanity/lib/image";
-import Quantity from "./Quantity";
+// import Quantity from "./Quantity";
 import Pricing from "./Pricing";
 import { KindeUser } from "@kinde-oss/kinde-auth-nextjs/server";
 
@@ -82,7 +82,7 @@ const CartMain: FC<{ data: typeOfCart[]; user: KindeUser }> = ({
                   />
                 </div>
                 <div className="truncate w-80">{item.productname}</div>
-                <Quantity item={item} user={user} data={data[index]} />
+                {/* <Quantity item={item} user={user} data={data[index]} /> */}
                 <p className="bg-gray-50">${item.price}.00</p>
                 <X
                   onClick={() => handleDelete(user.id as string, item._id)}

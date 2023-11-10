@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { singleProductType } from "./utils/types";
 import { urlForImage } from "../../sanity/lib/image";
-import Quantity from "./views/CartComp/Quantity";
+// import Quantity from "./views/CartComp/Quantity";
 import AddToCart from "./AddToCart";
 import Image from "next/image";
 import PortableText from "react-portable-text";
@@ -99,7 +99,7 @@ const ProductDetails = ({ product, user }: { product: singleProductType , user :
             </div>
             <div className="flex gap-x-3 mt-6 items-center">
               <h3 className="text-xs font-semibold ">Quantity</h3>
-              <Quantity />
+              {/* <Quantity /> */}
             </div>
             <div className="flex items-center gap-x-3 mt-6">
             <button aria-label="This will add product to cart" onClick={handleAddToCart} className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add to Cart</button>
